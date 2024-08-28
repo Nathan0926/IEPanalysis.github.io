@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Agua Fría Online PDF Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .criteria {
+      margin-left: 20px;
+    }
+
+    .compliant {
+      color: green;
+    }
+
+    .non-compliant {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="AFO.jpg" alt="Agua Fría Online Logo" class="logo" />
+    <h1>Upload and View Your PDF</h1>
+  </header>
+  <h1>IEP Evaluation Analyzer</h1>
+  <input type="file" id="fileInput" accept=".pdf, .doc, .docx" />
+  <button id="downloadBtn" style="display: none" onclick="downloadPDFReport(studentName, analysisResult)">
+    Download PDF Report
+  </button>
+  <!-- <button onclick="analyzeFile()">Analyze File</button> -->
+
+  <div id="results"></div>
+  <button id="resetBtn" onclick="window.location.reload()">Reset</button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
